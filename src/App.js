@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import './scss/style.scss';
 
 const loading = (
@@ -10,18 +10,25 @@ const loading = (
 
 // Containers
 const TheLayout = React.lazy(() => import('./containers/TheLayout'));
+const Login = React.lazy(() => import('./views/Login'));
+const Register = React.lazy(() => import('./views/Register'));
+const Predict = React.lazy(() => import('./views/Predict'));
+
 
 class App extends Component {
 
   render() {
     return (
-      <HashRouter>
-          <React.Suspense fallback={loading}>
-            <Switch>
-              <Route path="/" name="Home" render={props => <TheLayout {...props}/>} />
-            </Switch>
-          </React.Suspense>
-      </HashRouter>
+      <BrowserRouter>
+        <React.Suspense fallback={loading}>
+          <Switch>
+            <Route exact path="/login" name="Login Page" render={props => <Login {...props} />} />
+            <Route exact path="/register" name="Register Page" render={props => <Register {...props} />} />
+            <Route exact path="/predict" name="Predict Page" render={props => <Predict {...props} />} />
+            <Route path="/" name="Dashboard" render={props => <TheLayout {...props} />} />
+          </Switch>
+        </React.Suspense>
+      </BrowserRouter>
     );
   }
 }
