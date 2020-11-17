@@ -12,9 +12,7 @@ import {
     CDataTable,
     CModal,
     CModalBody,
-    CModalFooter,
     CModalHeader,
-    CModalTitle,
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 import Chart1 from '../../charts/chart1.js'

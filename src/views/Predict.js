@@ -16,13 +16,50 @@ import {
     CProgress
 } from '@coreui/react'
 
-import axios from 'axios';
+
 
 class Predict extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            states: ["Andhra Pradesh",
+                "Arunachal Pradesh",
+                "Assam",
+                "Bihar",
+                "Chhattisgarh",
+                "Goa",
+                "Gujarat",
+                "Haryana",
+                "Himachal Pradesh",
+                "Jammu and Kashmir",
+                "Jharkhand",
+                "Karnataka",
+                "Kerala",
+                "Madhya Pradesh",
+                "Maharashtra",
+                "Manipur",
+                "Meghalaya",
+                "Mizoram",
+                "Nagaland",
+                "Odisha",
+                "Punjab",
+                "Rajasthan",
+                "Sikkim",
+                "Tamil Nadu",
+                "Telangana",
+                "Tripura",
+                "Uttarakhand",
+                "Uttar Pradesh",
+                "West Bengal",
+                "Andaman and Nicobar Islands",
+                "Chandigarh",
+                "Dadra and Nagar Haveli",
+                "Daman and Diu",
+                "Delhi",
+                "Lakshadweep",
+                "Puducherry"],
+            chosenState: "Delhi",
             LoadPercentage: 0,
             loading: false,
             loadText: 'Scraping web pages',
@@ -43,7 +80,7 @@ class Predict extends Component {
                     loadText: 'Scraping web pages',
                     loadDiv: <img style={{ height: '300px', padding: '0 auto', position: 'relative', maxWidth: '800px', left: '150px' }} src='./load_scrape.gif'></img>
                 })
-                this.props.history.push('/dashboard');
+                this.props.history.push('/trends');
             }
             else if (this.state.LoadPercentage >= 300) {
                 this.setState({
@@ -73,6 +110,12 @@ class Predict extends Component {
                 LoadPercentage: this.state.LoadPercentage + 1,
             })
         }, 100);
+        this.props.history.push({
+            pathName: '/trends',
+            state: {
+                state: this.state.chosenState
+            }
+        })
     }
 
     render() {
@@ -91,39 +134,15 @@ class Predict extends Component {
                                                     <h1>Enter Location</h1>
                                                     <p className="text-muted">Enter the location to predict trends</p>
                                                     <CRow>
-                                                        <CCol xs="6">
+                                                        <CCol>
                                                             <CFormGroup>
-                                                                <CLabel htmlFor="ccmonth">Country</CLabel>
-                                                                <CSelect custom name="ccmonth" id="ccmonth">
-                                                                    <option value="1">1</option>
-                                                                    <option value="2">2</option>
-                                                                    <option value="3">3</option>
-                                                                    <option value="4">4</option>
-                                                                    <option value="5">5</option>
-                                                                    <option value="6">6</option>
-                                                                    <option value="7">7</option>
-                                                                    <option value="8">8</option>
-                                                                    <option value="9">9</option>
-                                                                    <option value="10">10</option>
-                                                                    <option value="11">11</option>
-                                                                    <option value="12">12</option>
-                                                                </CSelect>
-                                                            </CFormGroup>
-                                                        </CCol>
-                                                        <CCol xs="6">
-                                                            <CFormGroup>
-                                                                <CLabel htmlFor="ccyear">State</CLabel>
-                                                                <CSelect custom name="ccyear" id="ccyear">
-                                                                    <option>2017</option>
-                                                                    <option>2018</option>
-                                                                    <option>2019</option>
-                                                                    <option>2020</option>
-                                                                    <option>2021</option>
-                                                                    <option>2022</option>
-                                                                    <option>2023</option>
-                                                                    <option>2024</option>
-                                                                    <option>2025</option>
-                                                                    <option>2026</option>
+                                                                <CLabel htmlFor="state">State</CLabel>
+                                                                <CSelect custom name="state" id="state">
+                                                                    {
+                                                                        this.state.states.map((state) => {
+                                                                            return <option> {state}</option>
+                                                                        })
+                                                                    }
                                                                 </CSelect>
                                                             </CFormGroup>
                                                         </CCol>

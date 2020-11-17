@@ -17,6 +17,21 @@ import {
 import CIcon from '@coreui/icons-react'
 
 class Login extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            loading: false,
+        }
+    }
+
+    login() {
+        this.setState({
+            loading: true,
+        })
+        var temp = setTimeout(() => {
+            this.props.history.push('/predict');
+        }, 1000);
+    }
     render() {
         return (
             <div className="c-app c-default-layout flex-row align-items-center">
@@ -47,7 +62,15 @@ class Login extends Component {
                                             </CInputGroup>
                                             <CRow>
                                                 <CCol xs="12">
-                                                    <CButton color="primary" className="px-4">Login</CButton>
+                                                    {this.state.loading == false ?
+                                                        (<CButton class="btn btn-primary" onClick={() => { this.login() }}>
+                                                            <span role="status" aria-hidden="true"> Login </span>
+                                                        </CButton>)
+                                                        : (<CButton class="btn btn-primary" type="button" >
+                                                            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                                                            <span> &nbsp; Logging in</span>
+                                                        </CButton>)
+                                                    }
                                                 </CCol>
                                             </CRow>
                                         </CForm>
