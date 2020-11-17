@@ -37,7 +37,7 @@ const Chart6 = attributes => {
             },
             title: {
                 display: true,
-                text: 'Kids Wear: Selling Price',
+                text: 'Female Dresses: Selling Price',
                 fontSize: '14'
             },
             scales: {

@@ -37,7 +37,7 @@ const Chart1 = attributes => {
             },
             title: {
                 display: true,
-                text: 'Dresses: Color',
+                text: 'Male Dresses: Color',
                 fontSize: '14'
             },
             scales: {

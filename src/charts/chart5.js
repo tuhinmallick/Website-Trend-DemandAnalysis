@@ -37,7 +37,7 @@ const Chart5 = attributes => {
             },
             title: {
                 display: true,
-                text: 'Kids wear: Sleeve Length',
+                text: 'Female Dresses: Sleeve Length',
                 fontSize: '14'
             },
             scales: {

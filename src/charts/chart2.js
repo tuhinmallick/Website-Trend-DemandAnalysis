@@ -37,7 +37,7 @@ const Chart2 = attributes => {
             },
             title: {
                 display: true,
-                text: 'Dresses: Sleeve Length',
+                text: 'Male Dresses: Sleeve Length',
                 fontSize: '14'
             },
             scales: {

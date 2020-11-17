@@ -9,7 +9,12 @@ import {
     CProgress,
     CRow,
     CCallout,
-    CDataTable
+    CDataTable,
+    CModal,
+    CModalBody,
+    CModalFooter,
+    CModalHeader,
+    CModalTitle,
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 import Chart1 from '../../charts/chart1.js'
@@ -30,15 +35,11 @@ class Demand extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            gender: 'Male',
-            ageGroup: 1,
             state: 'Delhi',
             country: 'India',
-            date: Date.now(),
-            loading: false,
+            modal: false,
         }
     }
-    showGraph() { }
 
     render() {
         return (
@@ -51,6 +52,11 @@ class Demand extends Component {
                                     <CCol>
                                         <h4 id="traffic" className="card-title mb-0">{this.state.state}, {this.state.country}</h4>
                                         <div className="small text-muted">Late Updated: {this.state.date}</div>
+                                    </CCol>
+                                    <CCol>
+                                        <CButton class="btn btn-primary float-right" onClick={() => { this.setState({ modal: true }) }}>
+                                            <span role="status" aria-hidden="true"> Show Analytics </span>
+                                        </CButton>
                                     </CCol>
                                 </CRow>
                             </CCardBody>
@@ -104,7 +110,7 @@ class Demand extends Component {
                     </CCol>
                 </CRow>
                 <CRow>
-                    <CCol sm="6">
+                    <CCol sm="7">
                         <CCard>
                             <CCardBody>
                                 <Chart7 style={{ height: '210px' }} />
@@ -117,7 +123,7 @@ class Demand extends Component {
                             </CCardBody>
                         </CCard>
                     </CCol>
-                    <CCol sm="6">
+                    <CCol sm="5">
                         <CCard>
                             <CCardHeader>
                                 Ideal Lauch Time
@@ -173,25 +179,27 @@ class Demand extends Component {
                         </CCard>
                     </CCol>
                 </CRow>
-                <CCard>
-                    <CCardHeader>
+                <CModal show={this.state.modal}
+                    onClose={() => { this.setState({ modal: false }) }}
+                    size="lg">
+                    <CModalHeader>
                         Clothes predictive Analysis
-            </CCardHeader>
-                    <CCardBody>
+                    </CModalHeader>
+                    <CModalBody>
                         <CRow>
                             <CCol xs="12" md="6" xl="6">
 
                                 <CRow>
                                     <CCol sm="6">
                                         <CCallout color="info">
-                                            <small className="text-muted">New Clients</small>
+                                            <small className="text-muted">New Sales</small>
                                             <br />
                                             <strong className="h4">9,123</strong>
                                         </CCallout>
                                     </CCol>
                                     <CCol sm="6">
                                         <CCallout color="danger">
-                                            <small className="text-muted">Recurring Clients</small>
+                                            <small className="text-muted">Recurring Sales</small>
                                             <br />
                                             <strong className="h4">22,643</strong>
                                         </CCallout>
@@ -363,27 +371,6 @@ class Demand extends Component {
                                 </CRow>
 
                                 <hr className="mt-0" />
-
-                                <div className="progress-group mb-4">
-                                    <div className="progress-group-header">
-                                        <CIcon className="progress-group-icon" name="cil-user" />
-                                        <span className="title">Male</span>
-                                        <span className="ml-auto font-weight-bold">43%</span>
-                                    </div>
-                                    <div className="progress-group-bars">
-                                        <CProgress className="progress-xs" color="warning" value="43" />
-                                    </div>
-                                </div>
-                                <div className="progress-group mb-5">
-                                    <div className="progress-group-header">
-                                        <CIcon className="progress-group-icon" name="cil-user-female" />
-                                        <span className="title">Female</span>
-                                        <span className="ml-auto font-weight-bold">37%</span>
-                                    </div>
-                                    <div className="progress-group-bars">
-                                        <CProgress className="progress-xs" color="warning" value="37" />
-                                    </div>
-                                </div>
                                 <div className="progress-group">
                                     <div className="progress-group-header">
                                         <CIcon className="progress-group-icon" name="cib-instagram" />
@@ -434,195 +421,8 @@ class Demand extends Component {
 
                             </CCol>
                         </CRow>
-
-                        <br />
-
-                        <table className="table table-hover table-outline mb-0 d-none d-sm-table">
-                            <thead className="thead-light">
-                                <tr>
-                                    <th className="text-center"><CIcon name="cil-fire" /></th>
-                                    <th>Fashion </th>
-                                    <th className="text-center">Brand</th>
-                                    <th>Demand predicted</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td className="text-center">
-                                        <div className="c-avatar">
-                                            <img src={'avatars/1.jpg'} className="c-avatar-img" alt="admin@bootstrapmaster.com" />
-                                            <span className="c-avatar-status bg-success"></span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div>Top Handle Bag</div>
-                                        <div className="small text-muted">
-                                            <span>New</span>
-                                        </div>
-                                    </td>
-                                    <td className="text-center">
-                                        <img height={25} src="avatars/gucci.png" />
-
-                                    </td>
-                                    <td>
-                                        <div className="clearfix">
-                                            <div className="float-left">
-                                                <strong>50%</strong>
-                                            </div>
-                                            <div className="float-right">
-                                                <small className="text-muted">Jun 11, 2021 - Jul 10, 2021</small>
-                                            </div>
-                                        </div>
-                                        <CProgress className="progress-xs" color="success" value="50" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="text-center">
-                                        <div className="c-avatar">
-                                            <img src={'avatars/2.jpg'} className="c-avatar-img" alt="admin@bootstrapmaster.com" />
-                                            <span className="c-avatar-status bg-danger"></span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div>Message bag</div>
-                                        <div className="small text-muted">
-
-                                            <span>Recurring</span>
-                                        </div>
-                                    </td>
-                                    <td className="text-center">
-                                        <img height={25} src="avatars/rolex.png" />
-
-                                    </td>
-                                    <td>
-                                        <div className="clearfix">
-                                            <div className="float-left">
-                                                <strong>10%</strong>
-                                            </div>
-                                            <div className="float-right">
-                                                <small className="text-muted">Jun 11, 2021 - Jul 10, 2021</small>
-                                            </div>
-                                        </div>
-                                        <CProgress className="progress-xs" color="info" value="10" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="text-center">
-                                        <div className="c-avatar">
-                                            <img src={'avatars/3.jpg'} className="c-avatar-img" alt="admin@bootstrapmaster.com" />
-                                            <span className="c-avatar-status bg-warning"></span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div>Boat Neckline</div>
-                                        <div className="small text-muted">
-                                            <span>New</span>
-                                        </div>
-                                    </td>
-                                    <td className="text-center">
-                                        <img height={25} src="avatars/hermes.jpg" />
-                                    </td>
-                                    <td>
-                                        <div className="clearfix">
-                                            <div className="float-left">
-                                                <strong>74%</strong>
-                                            </div>
-                                            <div className="float-right">
-                                                <small className="text-muted">Jun 11, 2021 - Jul 10, 2021</small>
-                                            </div>
-                                        </div>
-                                        <CProgress className="progress-xs" color="warning" value="74" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="text-center">
-                                        <div className="c-avatar">
-                                            <img src={'avatars/4.jpg'} className="c-avatar-img" alt="admin@bootstrapmaster.com" />
-                                            <span className="c-avatar-status bg-secondary"></span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div>Scoop Neckline</div>
-                                        <div className="small text-muted">
-                                            <span>New</span>
-                                        </div>
-                                    </td>
-                                    <td className="text-center">
-                                        <img height={25} src="avatars/rolex.png" />
-                                    </td>
-                                    <td>
-                                        <div className="clearfix">
-                                            <div className="float-left">
-                                                <strong>98%</strong>
-                                            </div>
-                                            <div className="float-right">
-                                                <small className="text-muted">Jun 11, 2021 - Jul 10, 2021</small>
-                                            </div>
-                                        </div>
-                                        <CProgress className="progress-xs" color="danger" value="98" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="text-center">
-                                        <div className="c-avatar">
-                                            <img src={'avatars/5.jpg'} className="c-avatar-img" alt="admin@bootstrapmaster.com" />
-                                            <span className="c-avatar-status bg-success"></span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div>Lace Pattern Neckline</div>
-                                        <div className="small text-muted">
-                                            <span>New</span>
-                                        </div>
-                                    </td>
-                                    <td className="text-center">
-                                        <img height={25} src="avatars/gucci.png" />
-                                    </td>
-                                    <td>
-                                        <div className="clearfix">
-                                            <div className="float-left">
-                                                <strong>22%</strong>
-                                            </div>
-                                            <div className="float-right">
-                                                <small className="text-muted">Jun 11, 2021 - Jul 10, 2021</small>
-                                            </div>
-                                        </div>
-                                        <CProgress className="progress-xs" color="info" value="22" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="text-center">
-                                        <div className="c-avatar">
-                                            <img src={'avatars/6.jpg'} className="c-avatar-img" alt="admin@bootstrapmaster.com" />
-                                            <span className="c-avatar-status bg-danger"></span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div>Dotted Pattern Neckline</div>
-                                        <div className="small text-muted">
-                                            <span>New</span>
-                                        </div>
-                                    </td>
-                                    <td className="text-center">
-                                        <img height={25} src="avatars/hermes.jpg" />
-                                    </td>
-                                    <td>
-                                        <div className="clearfix">
-                                            <div className="float-left">
-                                                <strong>43%</strong>
-                                            </div>
-                                            <div className="float-right">
-                                                <small className="text-muted">Jun 11, 2021 - Jul 10, 2021</small>
-                                            </div>
-                                        </div>
-                                        <CProgress className="progress-xs" color="success" value="43" />
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                    </CCardBody>
-                </CCard>
+                    </CModalBody>
+                </CModal>
             </>
         )
     }

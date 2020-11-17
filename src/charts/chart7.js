@@ -16,10 +16,20 @@ const Chart7 = attributes => {
     const data1 = []
     const data2 = []
     const data3 = []
-    for (let i = 0; i <= elements; i++) {
+    for (let i = 0; i < 9; i++) {
       data1.push(random(50, 200))
-      data2.push(random(80, 100))
-      data3.push(random(90, 150))
+      data2.push(Number.NaN)
+      data3.push(Number.NaN)
+    }
+    for (let i = 0; i < 9; i++) {
+      data1.push(random(40, 100))
+      data2.push(random(50, 150))
+      data3.push(Number.NaN)
+    }
+    for (let i = 0; i < 9; i++) {
+      data1.push(random(20, 40))
+      data2.push(random(30, 100))
+      data3.push(random(100, 200))
     }
     return [
       {
