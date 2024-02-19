@@ -1,0 +1,313 @@
+repo_name: tuhinmallick/Website-Trend-DemandAnalysis
+report_id: 64087f2bc3d7e2227ec33272899a468b
+version: 0.1
+repo_type: Public
+timestamp: '2024-02-19T00:15:59+00:00'
+requested_by: shivanggarg1998
+provider: github
+branch: main
+detected_tools_count: 22
+tools:
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/tuhinmallick/Website-Trend-DemandAnalysis
+  detection_source: Repo Metadata
+- name: React
+  description: A JavaScript library for building user interfaces
+  website_url: https://reactjs.org/
+  version: 16.13.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript UI Libraries
+  image_url: https://img.stackshare.io/service/1020/OYIaJ1KK.png
+  detection_source_url: https://github.com/tuhinmallick/Website-Trend-DemandAnalysis/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: shivanggarg1998
+  last_updated_on: 2020-11-02 05:12:11.000000000 Z
+- name: React Router
+  description: A complete routing solution for React.js
+  website_url: https://github.com/rackt/react-router
+  version: 5.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: JavaScript Framework Components
+  image_url: https://img.stackshare.io/service/3350/8261421.png
+  detection_source_url: https://github.com/tuhinmallick/Website-Trend-DemandAnalysis/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: shivanggarg1998
+  last_updated_on: 2020-11-02 05:12:11.000000000 Z
+- name: Redux
+  description: Predictable state container for JavaScript apps
+  website_url: https://redux.js.org/
+  version: 4.0.5
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: State Management Library
+  image_url: https://img.stackshare.io/service/4074/13142323.png
+  detection_source_url: https://github.com/tuhinmallick/Website-Trend-DemandAnalysis/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: shivanggarg1998
+  last_updated_on: 2020-11-02 05:12:11.000000000 Z
+- name: Sass
+  description: Syntactically Awesome Style Sheets
+  website_url: http://sass-lang.com/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: CSS Pre-processors / Extensions
+  image_url: https://img.stackshare.io/service/1171/jCR2zNJV.png
+  detection_source_url: https://github.com/tuhinmallick/Website-Trend-DemandAnalysis/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: shivanggarg1998
+  last_updated_on: 2020-11-02 05:12:11.000000000 Z
+- name: jQuery
+  description: The Write Less, Do More, JavaScript Library.
+  website_url: http://jquery.com/
+  version: 3.5.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript UI Libraries
+  image_url: https://img.stackshare.io/service/1021/lxEKmMnB_400x400.jpg
+  detection_source_url: https://github.com/tuhinmallick/Website-Trend-DemandAnalysis/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: shivanggarg1998
+  last_updated_on: 2020-11-02 05:12:11.000000000 Z
+- name: Firebase
+  description: The Realtime App Platform
+  website_url: https://firebase.google.com/
+  open_source: false
+  hosted_saas: true
+  category: Application Hosting
+  sub_category: Realtime Backend / API
+  image_url: https://img.stackshare.io/service/116/cZLxNFZS.jpg
+  detection_source_url: https://github.com/tuhinmallick/Website-Trend-DemandAnalysis/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: shivanggarg1998
+  last_updated_on: 2020-11-17 18:43:05.000000000 Z
+- name: Enzyme
+  description: JavaScript Testing utilities for React, by Airbnb
+  website_url: https://enzymejs.github.io/enzyme/
+  version: 3.11.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/4488/default_87e6ca3fa146a959af95ccf3df1ec550eb434129.png
+  detection_source_url: https://github.com/tuhinmallick/Website-Trend-DemandAnalysis/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: shivanggarg1998
+  last_updated_on: 2020-11-02 05:12:11.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/tuhinmallick/Website-Trend-DemandAnalysis
+  detection_source: Repo Metadata
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/tuhinmallick/Website-Trend-DemandAnalysis/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: shivanggarg1998
+  last_updated_on: 2020-11-02 05:12:11.000000000 Z
+- name: axios
+  description: Promise based HTTP client for the browser and node.js
+  website_url: https://github.com/mzabriskie/axios
+  version: 0.21.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript Utilities & Libraries
+  image_url: https://img.stackshare.io/no-img-open-source.png
+  detection_source_url: https://github.com/tuhinmallick/Website-Trend-DemandAnalysis/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: shivanggarg1998
+  last_updated_on: 2020-11-17 18:43:05.000000000 Z
+- name: auto-changelog
+  description: Command line tool for generating a changelog from git tags and commit
+    history
+  package_url: https://www.npmjs.com/auto-changelog
+  version: 2.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17867/default_369b3bf3ef062123a581e4817f09cb0004de7ff6.png
+  detection_source_url: https://github.com/tuhinmallick/Website-Trend-DemandAnalysis/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: shivanggarg1998
+  last_updated_on: 2020-11-02 05:12:11.000000000 Z
+- name: classnames
+  description: A simple utility for conditionally joining classNames together
+  package_url: https://www.npmjs.com/classnames
+  version: 2.2.6
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15942/default_4040fefea2f98006727f63d042275b96a275ab2d.png
+  detection_source_url: https://github.com/tuhinmallick/Website-Trend-DemandAnalysis/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: shivanggarg1998
+  last_updated_on: 2020-11-02 05:12:11.000000000 Z
+- name: core-js
+  description: Standard library
+  package_url: https://www.npmjs.com/core-js
+  version: 2.6.11
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15869/default_7c39a83d4acd952df89b1ebfdb94c8646324fbf1.png
+  detection_source_url: https://github.com/tuhinmallick/Website-Trend-DemandAnalysis/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: shivanggarg1998
+  last_updated_on: 2020-11-02 05:12:11.000000000 Z
+- name: enzyme-adapter-react-16
+  description: JavaScript Testing utilities for React
+  package_url: https://www.npmjs.com/enzyme-adapter-react-16
+  version: 1.15.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15959/default_f8be85789693a9901dbcfa43c135c60525ae49a1.png
+  detection_source_url: https://github.com/tuhinmallick/Website-Trend-DemandAnalysis/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: shivanggarg1998
+  last_updated_on: 2020-11-02 05:12:11.000000000 Z
+- name: node-sass
+  description: Wrapper around libsass
+  package_url: https://www.npmjs.com/node-sass
+  version: 4.14.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15827/default_db4a7791d2f1174547374b9b587bc10fec088a5a.png
+  detection_source_url: https://github.com/tuhinmallick/Website-Trend-DemandAnalysis/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: shivanggarg1998
+  last_updated_on: 2020-11-02 05:12:11.000000000 Z
+  vulnerabilities:
+  - name: Improper Certificate Validation in node-sass
+    cve_id: CVE-2020-24025
+    cve_url: https://github.com/advisories/GHSA-r8f7-9pfq-mjmv
+    detected_date: Feb 10
+    severity: moderate
+    first_patched: 7.0.0
+- name: prop-types
+  description: Runtime type checking for React props and similar objects
+  package_url: https://www.npmjs.com/prop-types
+  version: 15.7.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15843/default_b71c906aeda030a5e2f1fe40bf12a93be52404ab.png
+  detection_source_url: https://github.com/tuhinmallick/Website-Trend-DemandAnalysis/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: shivanggarg1998
+  last_updated_on: 2020-11-02 05:12:11.000000000 Z
+- name: react-app-polyfill
+  description: Polyfills for various browsers including commonly used language features
+  package_url: https://www.npmjs.com/react-app-polyfill
+  version: 1.0.6
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16437/default_89ba91277e3434b03295bb11d22736632df1d04f.png
+  detection_source_url: https://github.com/tuhinmallick/Website-Trend-DemandAnalysis/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: shivanggarg1998
+  last_updated_on: 2020-11-02 05:12:11.000000000 Z
+- name: react-dom
+  description: React package for working with the DOM
+  package_url: https://www.npmjs.com/react-dom
+  version: 16.13.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15808/default_14fd11531839d935f920b6d55bd6f3528c890ad7.png
+  detection_source_url: https://github.com/tuhinmallick/Website-Trend-DemandAnalysis/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: shivanggarg1998
+  last_updated_on: 2020-11-02 05:12:11.000000000 Z
+- name: react-redux
+  description: Official React bindings for Redux
+  package_url: https://www.npmjs.com/react-redux
+  version: 7.2.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15984/default_f49d4c116f8ea0155f4d92673b084378bba02760.png
+  detection_source_url: https://github.com/tuhinmallick/Website-Trend-DemandAnalysis/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: shivanggarg1998
+  last_updated_on: 2020-11-02 05:12:11.000000000 Z
+- name: react-router-dom
+  description: DOM bindings for React Router
+  package_url: https://www.npmjs.com/react-router-dom
+  version: 5.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16025/default_e25d1fbb04a118c79fb444294461417342bd03bf.png
+  detection_source_url: https://github.com/tuhinmallick/Website-Trend-DemandAnalysis/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: shivanggarg1998
+  last_updated_on: 2020-11-02 05:12:11.000000000 Z
+- name: react-scripts
+  description: Configuration and scripts for Create React App
+  package_url: https://www.npmjs.com/react-scripts
+  version: 3.4.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15985/default_8b5680d4e916298d08363c291a0d6e34c07ceb15.png
+  detection_source_url: https://github.com/tuhinmallick/Website-Trend-DemandAnalysis/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: shivanggarg1998
+  last_updated_on: 2020-11-02 05:12:11.000000000 Z
